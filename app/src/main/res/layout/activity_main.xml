@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Campo de Apelido -->
+    <EditText
+        android:id="@+id/et_apelido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apelido"
+        android:inputType="textPersonName" />
+
+    <!-- Campo de Email -->
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <!-- Spinner para Idade -->
+    <Spinner
+        android:id="@+id/spinner_idade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- Botão para Submeter -->
+    <Button
+        android:id="@+id/btn_submeter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submeter" />
+</LinearLayout>
