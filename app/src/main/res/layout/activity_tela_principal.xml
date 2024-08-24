@@ -5,20 +5,20 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Tela_Principal">
 
     <View
-        android:id="@+id/containerComponents"
-        style="@style/ContainerComponents"
-        android:layout_width="424dp"
-        android:layout_height="80dp"
+        android:id="@+id/container"
+        style="@style/View_back"
+        android:layout_width="443dp"
+        android:layout_height="79dp"
         android:layout_marginTop="72dp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/containerComponents"
-        />
+        app:layout_constraintTop_toTopOf="@id/container" />
 
     <ImageView
         android:id="@+id/Logo2"
@@ -26,7 +26,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/img1"
-        app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+        app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
         android:textColor="@color/vermelho"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+        app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toEndOf="@+id/Logo2"
@@ -56,7 +56,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/img8"
-        app:layout_constraintBottom_toBottomOf="@+id/containerComponents"
+        app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +72,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/containerComponents"
+        app:layout_constraintTop_toBottomOf="@+id/container"
         app:layout_constraintVertical_bias="0.081" />
 
 

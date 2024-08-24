@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="View_back">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:background">@drawable/view_background</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+
+
+    <style name="View_jogo1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:background">@drawable/view_jogo1</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+
+
+    <style name="View_jogo2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:background">@drawable/view_jogo2</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+
+
+    <style name="View_jogo3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">250dp</item>
+        <item name="android:background">@drawable/view_jogo3</item>
+        <item name="android:layout_margin">20dp</item>
+    </style>
+
+
+
     <style name="ContainerComponents">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">250dp</item>
@@ -33,6 +66,9 @@
         <item name="android:textAllCaps">false</item>
         <item name="android:background">@drawable/button</item>
     </style>
+
+
+
 
 
 </resources>
