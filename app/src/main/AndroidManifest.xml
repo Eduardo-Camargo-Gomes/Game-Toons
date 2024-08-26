@@ -22,7 +22,7 @@
             android:name=".Tela_TracejadoMagico"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".PesquisaActivity"
             android:exported="false" />
         <activity
             android:name=".Tela_Principal"

@@ -5,11 +5,14 @@ import android.graphics.Color; // Adicione esta linha
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.example.projeto_pdm.databinding.ActivityTelaLoginBinding;
 
 public class Tela_login extends AppCompatActivity {
 
@@ -17,6 +20,7 @@ public class Tela_login extends AppCompatActivity {
     private Spinner spinnerIdade;
     private Button button;
     private final String senhaCorreta = "12345"; // Definição da senha correta
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +54,51 @@ public class Tela_login extends AppCompatActivity {
                 String idade = spinnerIdade.getSelectedItem().toString();
 
                 if (apelido.isEmpty() || senha.isEmpty() || idade.equals("Idade")) {
-                    Toast.makeText(Tela_login.this, "Preencha todos os campos", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Tela_login.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
                 } else if (!senha.equals(senhaCorreta)) {
-                    Toast.makeText(Tela_login.this, "Senha incorreta", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Tela_login.this, "Senha incorreta", Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent(Tela_login.this, Tela_Principal.class);
                     startActivity(intent);
-                }
+                }// fim else
+            }// fim onClick
+        });// fim listener utton
+
+        etApelido.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus){
+                    Toast.makeText(getApplicationContext(),"Apelido está usando o onFocus!", Toast.LENGTH_SHORT).show();
+                }// fim if
+            }// fim onFocs
+        });// fim anonma
+
+        etSenha.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus) {
+                }// fim if
+                Toast.makeText(getApplicationContext(), "Senha está usando o OnFocus!", Toast.LENGTH_LONG).show();
+
+            }// fim onFocus
+        });// fim anonimo
+
+
+
+        spinnerIdade.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(),"Idade selecionada!", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
             }
         });
-    }
-}
+
+
+
+
+    }// fim OnCreate
+}// fim classe

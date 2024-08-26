@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,62 +8,50 @@
     android:background="@color/white"
     tools:context=".Tela_login">
 
-    <View
-        android:id="@+id/container"
-        style="@style/View_back"
-        android:layout_width="449dp"
-        android:layout_height="83dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/container"
-        tools:ignore="ExtraText" />
-
-    <ImageView
-        android:id="@+id/Logo2"
-        android:layout_width="51dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="4dp"
-        android:src="@drawable/img1"
-        app:layout_constraintBottom_toBottomOf="@+id/container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        <ImageView
+            android:id="@+id/Logo2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/img1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.3" />
 
 
-    <TextView
-        android:id="@+id/texgametooons"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Game Toons"
-        android:textColor="@color/vermelho"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.062"
-        app:layout_constraintStart_toEndOf="@+id/Logo2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/texgametooons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Game Toons"
+            android:textColor="@color/vermelho"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toEndOf="@+id/Logo2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.458"
+            tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/trespontos"
-        android:layout_width="42dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="4dp"
-        android:src="@drawable/img8"
-        app:layout_constraintBottom_toBottomOf="@+id/container"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        />
+        <ImageView
+            android:id="@+id/trespontos"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/img8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
 
     <ImageView
@@ -71,12 +59,12 @@
         android:layout_width="172dp"
         android:layout_height="177dp"
         android:src="@drawable/img6"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container"
-        app:layout_constraintVertical_bias="0.028" />
+        app:layout_constraintVertical_bias="0.081" />
 
 
     <TextView
@@ -116,6 +104,9 @@
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
         android:hint="Apelido"
+        android:nextFocusForward="@id/edit_senha"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -147,6 +138,10 @@
         android:layout_height="60dp"
         android:layout_marginTop="44dp"
         android:hint="Senha"
+        android:imeOptions="actionDone"
+        android:singleLine="true"
+        android:password="true"
+        android:nextFocusForward="@id/spinner_idade"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
@@ -172,7 +167,8 @@
         android:layout_width="328dp"
         android:layout_height="60dp"
         android:layout_marginTop="44dp"
-        android:background="@drawable/spinner_background" app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edit_senha" />
@@ -189,5 +185,6 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner_idade"
         app:layout_constraintVertical_bias="0.166" />
 
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

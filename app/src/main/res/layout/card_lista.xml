@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:backgroundTint="@color/amarelo"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="150dp"
+    app:cardCornerRadius="35dp"
+    android:layout_marginTop="20dp"
+    android:id="@+id/cartao_item"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imagem_item"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            tools:src="@drawable/img3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.941"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45" />
+
+        <TextView
+            android:id="@+id/nome_jogo_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Tracejado mágico"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.117"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            />
+
+
+        <TextView
+            android:id="@+id/descricao_jogo_lista"
+            android:layout_width="201dp"
+            android:layout_height="wrap_content"
+            tools:text="Arraste corretamente e ganhe pontos!"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nome_jogo_item"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintVertical_bias="0.843" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

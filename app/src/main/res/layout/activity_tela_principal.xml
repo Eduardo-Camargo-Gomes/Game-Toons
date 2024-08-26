@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -8,17 +8,9 @@
     android:background="@color/white"
     tools:context=".Tela_Principal">
 
-    <View
-        android:id="@+id/container"
-        style="@style/View_back"
-        android:layout_width="443dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="72dp"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/container" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/Logo2"
@@ -26,7 +18,6 @@
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/img1"
-        app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +33,7 @@
         android:textColor="@color/vermelho"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/container"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toEndOf="@+id/Logo2"
@@ -52,17 +43,28 @@
 
     <ImageView
         android:id="@+id/trespontos"
-        android:layout_width="42dp"
+        android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/img8"
-        app:layout_constraintBottom_toBottomOf="@+id/container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/image_pesquisa"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:src="@android:drawable/ic_menu_search"
+        app:layout_constraintEnd_toStartOf="@id/trespontos"
+        android:scaleType="fitXY"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/abc"
@@ -72,7 +74,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/container"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
         app:layout_constraintVertical_bias="0.081" />
 
 
@@ -94,16 +97,16 @@
     <View
         android:id="@+id/magico"
         style="@style/ContainerComponents"
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="95dp"
         android:layout_marginTop="72dp"
-        android:background="@color/vermelho"
+       android:backgroundTint="@color/vermelho"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textselecione"
-        app:layout_constraintVertical_bias="0.159" />
+        app:layout_constraintVertical_bias="0.159"/>
 
     <ImageView
         android:id="@+id/urso"
@@ -123,7 +126,6 @@
         android:layout_height="wrap_content"
         android:text="Tracejado mágico"
         android:textColor="@color/white"
-        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/magico"
         app:layout_constraintEnd_toEndOf="@+id/magico"
@@ -139,7 +141,6 @@
         android:layout_height="44dp"
         android:text="Complete a forma dos animais com criatividade"
         android:textColor="@color/white"
-        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/magico"
         app:layout_constraintEnd_toEndOf="@+id/magico"
@@ -151,10 +152,10 @@
     <View
         android:id="@+id/traco"
         style="@style/ContainerComponents"
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="95dp"
-        android:layout_marginTop="72dp"
-        android:background="@color/azul"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/azul"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
@@ -182,7 +183,7 @@
         android:layout_height="wrap_content"
         android:text="Desafio do traço"
         android:textColor="@color/white"
-        android:textSize="20sp"
+
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/traco"
         app:layout_constraintEnd_toEndOf="@+id/traco"
@@ -197,7 +198,6 @@
         android:layout_height="44dp"
         android:text="Trace o melhor caminho para chegar ao objetivo!"
         android:textColor="@color/white"
-        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/traco"
         app:layout_constraintEnd_toEndOf="@+id/traco"
@@ -209,10 +209,10 @@
     <View
         android:id="@+id/match"
         style="@style/ContainerComponents"
-        android:layout_width="368dp"
+        android:layout_width="match_parent"
         android:layout_height="95dp"
         android:layout_marginTop="72dp"
-        android:background="@color/amarelo"
+        android:backgroundTint="@color/amarelo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
@@ -238,7 +238,6 @@
         android:layout_height="wrap_content"
         android:text="Animal match"
         android:textColor="@color/white"
-        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/match"
         app:layout_constraintEnd_toEndOf="@+id/match"
@@ -252,9 +251,8 @@
         android:id="@+id/textmatch2"
         android:layout_width="201dp"
         android:layout_height="44dp"
-        android:text="Trace o melhor caminho para chegar ao objetivo!"
+        android:text="Arraste corretamente e marque pontos!"
         android:textColor="@color/white"
-        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/match"
         app:layout_constraintEnd_toEndOf="@+id/match"
@@ -264,4 +262,6 @@
         app:layout_constraintVertical_bias="0.823" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
