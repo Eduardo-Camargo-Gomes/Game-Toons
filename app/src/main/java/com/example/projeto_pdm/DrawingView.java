@@ -4,93 +4,104 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Path;
 import android.util.AttributeSet;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class DrawingView extends View {
 
     private Paint paint;
-    private List<Point> points;
-    private Point lastPoint = null;
+    private Path path;
+    private List<Stroke> strokes = new ArrayList<>(); // Lista de traços
+    private int currentColor = Color.BLACK; // Cor inicial
+    private float strokeWidth = 10f; // Largura do traço
+    private GestureDetector gestureDetector;
 
     public DrawingView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(context);
     }
 
-    public DrawingView(Context context) {
-        super(context);
-        init();
-    }
-
-    private void init() {
+    private void init(Context context) {
         paint = new Paint();
-        paint.setColor(Color.RED); // Cor inicial
-        paint.setStrokeWidth(10);
+        paint.setAntiAlias(true);
+        paint.setStrokeWidth(strokeWidth);
         paint.setStyle(Paint.Style.STROKE);
-        paint.setStrokeCap(Paint.Cap.ROUND); // Linhas com extremidades arredondadas
+        paint.setStrokeJoin(Paint.Join.ROUND);
+        paint.setStrokeCap(Paint.Cap.ROUND);
 
-        points = new ArrayList<>();
+        gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onDoubleTap(MotionEvent e) {
+                clearDrawing(); // Limpa o desenho ao detectar um toque duplo
+                return true;
+            }
+        });
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
-        // Desenhar linhas suaves
-        if (points.size() > 1) {
-            for (int i = 1; i < points.size(); i++) {
-                Point point = points.get(i);
-                Point prevPoint = points.get(i - 1);
-
-                if (prevPoint != null && point != null) {
-                    canvas.drawLine(prevPoint.x, prevPoint.y, point.x, point.y, paint);
-                }
-            }
+        for (Stroke stroke : strokes) {
+            paint.setColor(stroke.color); // Define a cor do traço
+            paint.setStrokeWidth(stroke.strokeWidth); // Define a largura do traço
+            canvas.drawPath(stroke.path, paint); // Desenha o traço
         }
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        if (gestureDetector.onTouchEvent(event)) {
+            return true;
+        }
+
         float x = event.getX();
         float y = event.getY();
 
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                lastPoint = new Point(x, y);
-                points.add(lastPoint);
+                path = new Path();
+                path.moveTo(x, y);
+                strokes.add(new Stroke(currentColor, strokeWidth, path)); // Adiciona um novo traço
                 invalidate();
                 break;
             case MotionEvent.ACTION_MOVE:
-                Point newPoint = new Point(x, y);
-                points.add(newPoint);
+                path.lineTo(x, y);
                 invalidate();
                 break;
             case MotionEvent.ACTION_UP:
-                lastPoint = null;
+                path.lineTo(x, y);
+                invalidate();
                 break;
         }
+
         return true;
     }
 
     public void setPaintColor(int color) {
-        paint.setColor(color);
+        currentColor = color;
     }
 
     public void clearDrawing() {
-        points.clear();
+        strokes.clear();
         invalidate();
     }
 
-    private static class Point {
-        float x, y;
+    // Classe que representa um traço
+    private static class Stroke {
+        int color;
+        float strokeWidth;
+        Path path;
 
-        Point(float x, float y) {
-            this.x = x;
-            this.y = y;
+        Stroke(int color, float strokeWidth, Path path) {
+            this.color = color;
+            this.strokeWidth = strokeWidth;
+            this.path = path;
         }
     }
 }

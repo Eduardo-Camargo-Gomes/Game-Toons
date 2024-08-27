@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +14,6 @@ public class Tela_TracejadoMagico extends AppCompatActivity {
 
     private int currentImageIndex = 0;
     private int[] images = {R.drawable.macaco, R.drawable.porquinho, R.drawable.gatinho, R.drawable.cachorrinho};
-    private int currentColorIndex = 0;
     private boolean isImageVisible = true; // Para controlar a visibilidade da imagem
 
     @Override
@@ -79,14 +79,18 @@ public class Tela_TracejadoMagico extends AppCompatActivity {
             }
         });
 
-        // Listener para ocultar e mostrar a imagem ao clicar no botão "Terminar"
+        // Listener para ocultar e mostrar a imagem e o desenho ao clicar no botão "Terminar"
         buttonTerminar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (isImageVisible) {
                     imageView.setVisibility(View.INVISIBLE);
+                    drawingView.setVisibility(View.VISIBLE); // Faz o desenho aparecer
+                    // Exibe a mensagem rápida
+                    Toast.makeText(Tela_TracejadoMagico.this, "Parabéns, agora mostre ao seu responsável!!", Toast.LENGTH_SHORT).show();
                 } else {
                     imageView.setVisibility(View.VISIBLE);
+                    drawingView.setVisibility(View.VISIBLE); // Garante que o desenho esteja visível para interação
                 }
                 isImageVisible = !isImageVisible; // Alterna o estado de visibilidade
             }
