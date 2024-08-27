@@ -8,19 +8,20 @@
     android:background="@color/vermelho"
     tools:context=".Tela_TracejadoMagico">
 
+    <!-- Existing layout components -->
 
     <View
         android:id="@+id/container"
         style="@style/View_jogo1"
         android:layout_width="449dp"
         android:layout_height="83dp"
-
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/container"
         tools:ignore="ExtraText" />
+
 
     <ImageView
         android:id="@+id/Logo2"
@@ -34,7 +35,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
-
 
     <TextView
         android:id="@+id/texgametooons"
@@ -52,7 +52,6 @@
         app:layout_constraintVertical_bias="0.458"
         tools:ignore="MissingConstraints" />
 
-
     <View
         android:id="@+id/magico"
         style="@style/ContainerComponents"
@@ -63,8 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/container"
-        app:layout_constraintVertical_bias="0.139" />
-
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/texTracejadomagico"
@@ -85,8 +83,8 @@
     <View
         android:id="@+id/quadrado"
         style="@style/ContainerComponents"
-        android:layout_width="345dp"
-        android:layout_height="260dp"
+        android:layout_width="337dp"
+        android:layout_height="351dp"
         android:background="@color/cinza"
         app:layout_constraintBottom_toBottomOf="@+id/magico"
         app:layout_constraintEnd_toEndOf="@+id/magico"
@@ -94,18 +92,95 @@
         app:layout_constraintTop_toTopOf="@+id/magico"
         app:layout_constraintVertical_bias="0.249" />
 
+    <ImageView
+        android:id="@+id/translucentImage"
+        android:layout_width="320dp"
+        android:layout_height="352dp"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/macaco"
+        app:layout_constraintBottom_toBottomOf="@+id/quadrado"
+        app:layout_constraintEnd_toEndOf="@+id/quadrado"
+        app:layout_constraintStart_toStartOf="@+id/quadrado"
+        app:layout_constraintTop_toTopOf="@+id/quadrado" />
+
+    <com.example.projeto_pdm.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="337dp"
+        android:layout_height="350dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/quadrado"
+        app:layout_constraintEnd_toEndOf="@+id/quadrado"
+        app:layout_constraintStart_toStartOf="@+id/quadrado"
+        app:layout_constraintTop_toTopOf="@+id/quadrado" />
+
+    <!-- Color Buttons -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/colorButton1"
+        style="@style/Button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/vermelho"
+        app:layout_constraintStart_toStartOf="@+id/quadrado"
+        app:layout_constraintTop_toBottomOf="@+id/quadrado" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/colorButton2"
+        style="@style/Button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/azul"
+        app:layout_constraintStart_toEndOf="@+id/colorButton1"
+        app:layout_constraintTop_toBottomOf="@+id/quadrado" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/colorButton3"
+        style="@style/Button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/verde"
+        app:layout_constraintStart_toEndOf="@+id/colorButton2"
+        app:layout_constraintTop_toBottomOf="@+id/quadrado" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/colorButton4"
+        style="@style/Button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/amarelo"
+        app:layout_constraintStart_toEndOf="@+id/colorButton3"
+        app:layout_constraintTop_toBottomOf="@+id/quadrado" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/colorButton5"
+        style="@style/Button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:backgroundTint="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/magico"
+        app:layout_constraintTop_toBottomOf="@+id/colorButton1" />
+
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
         style="@style/Button"
         android:layout_width="140dp"
         android:layout_height="41dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="24dp"
         android:text="Mudar"
         app:layout_constraintBottom_toBottomOf="@+id/magico"
         app:layout_constraintEnd_toEndOf="@+id/magico"
         app:layout_constraintTop_toBottomOf="@+id/quadrado"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintVertical_bias="0.282" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_terminar"
@@ -117,6 +192,6 @@
         app:layout_constraintBottom_toBottomOf="@+id/magico"
         app:layout_constraintEnd_toEndOf="@+id/magico"
         app:layout_constraintTop_toBottomOf="@+id/quadrado"
-        app:layout_constraintVertical_bias="0.75" />
+        app:layout_constraintVertical_bias="0.931" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

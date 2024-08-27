@@ -19,7 +19,7 @@ public class Tela_login extends AppCompatActivity {
     private EditText etApelido, etSenha;
     private Spinner spinnerIdade;
     private Button button;
-    private final String senhaCorreta = "12345"; // Definição da senha correta
+    private final String senhaCorreta = "1"; // Definição da senha correta
 
 
     @Override

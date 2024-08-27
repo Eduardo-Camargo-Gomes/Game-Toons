@@ -35,7 +35,7 @@ public class Tela_Principal extends AppCompatActivity {
         magicoView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Tela_Principal.this, PesquisaActivity.class);
+                Intent intent = new Intent(Tela_Principal.this, Tela_TracejadoMagico.class);
                 startActivity(intent);
             }
         });

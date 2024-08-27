@@ -1,5 +1,8 @@
 <resources>
-    <string name="app_name">Projeto_PDM</string>
-
-
+    <string-array name="image_names">
+        <item>Macaco</item>
+        <item>Porquinho</item>
+        <item>Gatinho</item>
+        <item>Cachorrinho</item>
+    </string-array>
 </resources>
