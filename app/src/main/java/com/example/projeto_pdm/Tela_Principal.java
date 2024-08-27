@@ -22,7 +22,7 @@ public class Tela_Principal extends AppCompatActivity {
         View magicoView = findViewById(R.id.magico);
         View tracoView = findViewById(R.id.traco);
         View matchView = findViewById(R.id.match);
-        ImageButton pesquisa = binding.imagePesquisa;
+        ImageButton pesquisa = findViewById(R.id.image_pesquisa);
         
         pesquisa.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,7 +35,7 @@ public class Tela_Principal extends AppCompatActivity {
         magicoView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Tela_Principal.this, PesquisaActivity.class);
+                Intent intent = new Intent(Tela_Principal.this, Tela_TracejadoMagico.class);
                 startActivity(intent);
             }
         });

@@ -1,6 +1,8 @@
 package com.example.projeto_pdm;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -48,12 +50,13 @@ public class PesquisaActivity extends AppCompatActivity {
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                adaptador.filter(s.toString());
+
                 }// fim override
 
                 @Override
                 public void afterTextChanged(Editable s) {
 
-                }
+                }// fim metodo
             });
 
         listView.setAdapter(adaptador);

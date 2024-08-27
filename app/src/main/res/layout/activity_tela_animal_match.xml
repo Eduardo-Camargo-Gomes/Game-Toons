@@ -70,9 +70,8 @@
         android:id="@+id/texTracejadomagico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Animal"
+        android:text="Quais dos animais abaixo voam ?"
         android:textColor="@color/amarelo"
-        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/magico"
         app:layout_constraintEnd_toEndOf="@+id/magico"
@@ -95,11 +94,136 @@
         app:layout_constraintTop_toTopOf="@+id/magico"
         app:layout_constraintVertical_bias="0.212" />
 
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/arara"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toTopOf="@id/quadrado"
+        app:layout_constraintStart_toStartOf="@id/quadrado"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Arara"
+            android:padding="10dp"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vaca"
+        app:layout_constraintTop_toBottomOf="@id/arara"
+        app:layout_constraintStart_toStartOf="@id/quadrado"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Vaca"
+            android:padding="10dp"
+            android:textSize="20sp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/elefante"
+
+        app:layout_constraintTop_toBottomOf="@id/vaca"
+        app:layout_constraintBottom_toBottomOf="@id/quadrado"
+        app:layout_constraintStart_toStartOf="@id/quadrado"
+        app:cardCornerRadius="20dp"
+        android:layout_marginStart="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Elefante"
+            android:padding="10dp"
+            android:textSize="20sp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/passaro"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toTopOf="@id/quadrado"
+        app:layout_constraintEnd_toEndOf="@id/quadrado"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pássaro"
+            android:padding="10dp"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guaxinim"
+        app:layout_constraintTop_toBottomOf="@id/arara"
+        app:layout_constraintEnd_toEndOf="@id/quadrado"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginEnd="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Guaxinim"
+            android:padding="10dp"
+            android:textSize="20sp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gaivota"
+        app:layout_constraintTop_toBottomOf="@id/vaca"
+        app:layout_constraintBottom_toBottomOf="@id/quadrado"
+        app:layout_constraintEnd_toEndOf="@id/quadrado"
+        app:cardCornerRadius="20dp"
+        android:layout_marginEnd="40dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Gaivota"
+            android:padding="10dp"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
     <TextView
         android:id="@+id/textPontuacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pontuação: 000"
+        tools:text="Pontuação: 000"
         android:textColor="@color/amarelo"
         android:textSize="22sp"
         android:textStyle="bold"
@@ -111,32 +235,8 @@
         app:layout_constraintVertical_bias="0.609"
         tools:ignore="MissingConstraints" />
 
-    <View
-        android:id="@+id/quadradoverde"
-        style="@style/ContainerComponents"
-        android:layout_width="103dp"
-        android:layout_height="86dp"
-        android:background="@color/verde"
-        app:layout_constraintBottom_toBottomOf="@+id/magico"
-        app:layout_constraintEnd_toEndOf="@+id/magico"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/magico"
-        app:layout_constraintTop_toTopOf="@+id/magico"
-        app:layout_constraintVertical_bias="0.809" />
 
 
-    <View
-        android:id="@+id/quadradovermelho"
-        style="@style/ContainerComponents"
-        android:layout_width="103dp"
-        android:layout_height="86dp"
-        android:background="@color/vermelho"
-        app:layout_constraintBottom_toBottomOf="@+id/magico"
-        app:layout_constraintEnd_toEndOf="@+id/magico"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/magico"
-        app:layout_constraintTop_toTopOf="@+id/magico"
-        app:layout_constraintVertical_bias="0.817" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_terminar"
@@ -144,7 +244,7 @@
         android:layout_width="194dp"
         android:layout_height="39dp"
         android:layout_marginEnd="88dp"
-        android:background="@color/amarelo"
+        android:backgroundTint="@color/amarelo"
         android:text="Terminar"
         app:layout_constraintBottom_toBottomOf="@+id/magico"
         app:layout_constraintEnd_toEndOf="@+id/magico"
