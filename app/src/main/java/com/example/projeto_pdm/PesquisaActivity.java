@@ -9,14 +9,11 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.example.projeto_pdm.databinding.ActivityPesquisaBinding;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class PesquisaActivity extends AppCompatActivity {
-
 
     ActivityPesquisaBinding binding;
 
@@ -40,27 +37,21 @@ public class PesquisaActivity extends AppCompatActivity {
 
             CardsAdapter adaptador = new CardsAdapter(cartoes,PesquisaActivity.this);
 
-
            barraPesquisa.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
                 }
 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                adaptador.filter(s.toString());
-
                 }// fim override
 
                 @Override
                 public void afterTextChanged(Editable s) {
-
                 }// fim metodo
             });
 
         listView.setAdapter(adaptador);
-
-
     }// fim onCreate
 }// fim classe

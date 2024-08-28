@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-
 import com.example.projeto_pdm.databinding.ActivityTelaPrincipalBinding;
 
 public class Tela_Principal extends AppCompatActivity {
@@ -55,7 +54,5 @@ public class Tela_Principal extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
     }// fim on Create
 }

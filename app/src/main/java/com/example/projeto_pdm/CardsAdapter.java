@@ -26,14 +26,11 @@ public class CardsAdapter extends BaseAdapter {
     LayoutInflater inflater;
     CardListaBinding binding;
 
-
-
     public CardsAdapter(List<Card> listaCartao, Context context) {
         this.listaCartao = new ArrayList<>(listaCartao);
        this.listaCartaoCompleta = new ArrayList<>(listaCartao);
         this.context = context;
     }
-
 
     @Override
     public int getCount() {
@@ -49,7 +46,6 @@ public class CardsAdapter extends BaseAdapter {
     public long getItemId(int position) {
         return 0;
     }
-
 
     public void filter(String texto){
             listaCartao.clear();

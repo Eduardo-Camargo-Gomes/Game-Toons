@@ -3,6 +3,8 @@ package com.example.projeto_pdm;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -33,70 +35,48 @@ public class Tela_TracejadoMagico extends AppCompatActivity {
         final Button buttonTerminar = findViewById(R.id.button_terminar);
         final TextView textView = findViewById(R.id.texTracejadomagico);
 
-        // Listener para mudar a imagem e apagar as linhas ao clicar no botão "Mudar"
-        button.setOnClickListener(new View.OnClickListener() {
+        // Configuração do GestureDetector para detectar duplo toque
+        GestureDetector gestureDetector = new GestureDetector(this, new GestureDetector.SimpleOnGestureListener() {
             @Override
-            public void onClick(View v) {
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-                imageView.setImageResource(images[currentImageIndex]);
-                textView.setText(getResources().getTextArray(R.array.image_names)[currentImageIndex]);
-                drawingView.clearDrawing(); // Apaga o desenho ao mudar a imagem
+            public boolean onDoubleTap(MotionEvent e) {
+                // Ações quando ocorre um duplo toque
+                Toast.makeText(Tela_TracejadoMagico.this, "Duplo toque detectado!", Toast.LENGTH_SHORT).show();
+                return super.onDoubleTap(e);
             }
+        });
+
+        drawingView.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
+
+        // Listener para mudar a imagem e apagar as linhas ao clicar no botão "Mudar"
+        button.setOnClickListener(v -> {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            imageView.setImageResource(images[currentImageIndex]);
+            textView.setText(getResources().getTextArray(R.array.image_names)[currentImageIndex]);
+            drawingView.clearDrawing(); // Apaga o desenho ao mudar a imagem
         });
 
         // Listeners para mudar a cor do desenho
-        colorButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawingView.setPaintColor(Color.RED);
-            }
-        });
-
-        colorButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawingView.setPaintColor(Color.BLUE);
-            }
-        });
-
-        colorButton3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawingView.setPaintColor(Color.GREEN);
-            }
-        });
-
-        colorButton4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawingView.setPaintColor(Color.YELLOW);
-            }
-        });
-
-        colorButton5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawingView.setPaintColor(Color.BLACK);
-            }
-        });
+        colorButton1.setOnClickListener(v -> drawingView.setPaintColor(Color.RED));
+        colorButton2.setOnClickListener(v -> drawingView.setPaintColor(Color.BLUE));
+        colorButton3.setOnClickListener(v -> drawingView.setPaintColor(Color.GREEN));
+        colorButton4.setOnClickListener(v -> drawingView.setPaintColor(Color.YELLOW));
+        colorButton5.setOnClickListener(v -> drawingView.setPaintColor(Color.BLACK));
 
         // Listener para ocultar e mostrar a imagem e o desenho ao clicar no botão "Terminar"
-        buttonTerminar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (isImageVisible) {
-                    imageView.setVisibility(View.INVISIBLE);
-                    drawingView.setVisibility(View.VISIBLE); // Faz o desenho aparecer
-                    // Exibe a mensagem rápida
-                    Toast.makeText(Tela_TracejadoMagico.this, "Parabéns, agora mostre ao seu responsável!!", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Tela_TracejadoMagico.this, Tela_Principal.class);
-                    startActivity(intent);
-                } else {
-                    imageView.setVisibility(View.VISIBLE);
-                    drawingView.setVisibility(View.VISIBLE); // Garante que o desenho esteja visível para interação
-                }
-                isImageVisible = !isImageVisible; // Alterna o estado de visibilidade
+        buttonTerminar.setOnClickListener(v -> {
+            if (isImageVisible) {
+                imageView.setVisibility(View.INVISIBLE);
+                drawingView.setVisibility(View.VISIBLE); // Faz o desenho aparecer
+                // Exibe a mensagem rápida
+                Toast.makeText(Tela_TracejadoMagico.this, "Parabéns, agora mostre ao seu responsável!!", Toast.LENGTH_SHORT).show();
+                // Descomente as linhas abaixo se desejar redirecionar para outra atividade
+                // Intent intent = new Intent(Tela_TracejadoMagico.this, Tela_Principal.class);
+                // startActivity(intent);
+            } else {
+                imageView.setVisibility(View.VISIBLE);
+                drawingView.setVisibility(View.VISIBLE); // Garante que o desenho esteja visível para interação
             }
+            isImageVisible = !isImageVisible; // Alterna o estado de visibilidade
         });
     }
 }

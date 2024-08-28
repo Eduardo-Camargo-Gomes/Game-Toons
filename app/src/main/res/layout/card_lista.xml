@@ -37,9 +37,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.117"
             android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"
-            />
-
+            android:layout_marginStart="20dp" />
 
         <TextView
             android:id="@+id/descricao_jogo_lista"
@@ -53,7 +51,6 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             app:layout_constraintVertical_bias="0.843" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

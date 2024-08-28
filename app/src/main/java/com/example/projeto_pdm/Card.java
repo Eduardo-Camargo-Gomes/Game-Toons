@@ -12,15 +12,12 @@ public class Card {
     String descricaoJogo;
     int cordeFundo;
 
-
-
     public Card(int imagemJogo, String nomeJogo, String descricaoJogo, int cordeFundo) {
         this.imagemJogo = imagemJogo;
         this.nomeJogo = nomeJogo;
         this.descricaoJogo = descricaoJogo;
         this.cordeFundo = cordeFundo;
     }
-
 
     public int getCordeFundo() {
         return cordeFundo;
@@ -55,6 +52,3 @@ public class Card {
     }
 
 } //fim classe
-
-
-

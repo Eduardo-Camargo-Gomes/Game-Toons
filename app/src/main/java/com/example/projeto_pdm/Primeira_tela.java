@@ -1,10 +1,8 @@
 package com.example.projeto_pdm;
 
 import android.os.Bundle;
-
 import android.content.Intent;
 import android.os.Handler;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 

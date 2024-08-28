@@ -9,8 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        >
+        android:layout_marginTop="10dp">
 
     <EditText
         android:layout_width="match_parent"
@@ -23,8 +22,7 @@
         android:textColorHint="@color/vermelho"
         android:padding="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
     </EditText>
 
         <ImageView
@@ -37,8 +35,7 @@
             app:layout_constraintBottom_toBottomOf="@id/edit_pesquisa"
             android:layout_marginEnd="10dp"
             android:src="@android:drawable/ic_menu_search"
-            android:background="@color/white"
-            />
+            android:background="@color/white" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -46,7 +43,6 @@
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/lista_cards"
-        />
+        android:id="@+id/lista_cards" />
 
 </LinearLayout>

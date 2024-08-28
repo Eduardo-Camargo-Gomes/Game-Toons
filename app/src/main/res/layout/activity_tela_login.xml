@@ -24,7 +24,6 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.3" />
 
-
         <TextView
             android:id="@+id/texgametooons"
             android:layout_width="wrap_content"
@@ -50,141 +49,148 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.955"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/abc"
+            android:layout_width="172dp"
+            android:layout_height="177dp"
+            android:layout_marginTop="52dp"
+            android:src="@drawable/img6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/abc"
-        android:layout_width="172dp"
-        android:layout_height="177dp"
-        android:src="@drawable/img6"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="80dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.081" />
+        <TextView
+            android:id="@+id/textselecione"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insira suas Informações"
+            android:textColor="@color/vermelho"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.516"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abc"
+            app:layout_constraintVertical_bias="0.0" />
 
+        <TextView
+            android:id="@+id/textapelido"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apelido"
+            android:textColor="@color/azul_escuro"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/edit_apelido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edit_apelido"
+            app:layout_constraintTop_toBottomOf="@+id/textselecione"
+            app:layout_constraintVertical_bias="0.944" />
 
-    <TextView
-        android:id="@+id/textselecione"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Insira suas Informações"
-        android:textColor="@color/vermelho"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/abc"
-        app:layout_constraintVertical_bias="0.035" />
+        <EditText
+            android:id="@+id/edit_apelido"
+            style="@style/Edit_text"
+            android:layout_width="328dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="40dp"
+            android:hint="Apelido"
+            android:nextFocusForward="@id/edit_senha"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:inputType="textPersonName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textselecione"
+            app:layout_constraintVertical_bias="0.058" />
 
-    <TextView
-        android:id="@+id/textapelido"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Apelido"
-        android:textColor="@color/azul_escuro"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edit_apelido"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edit_apelido"
-        app:layout_constraintTop_toBottomOf="@+id/textselecione"
-        app:layout_constraintVertical_bias="0.944" />
+        <TextView
+            android:id="@+id/textsenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senha"
+            android:textColor="@color/azul_escuro"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/edit_senha"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/edit_senha"
+            app:layout_constraintTop_toBottomOf="@+id/edit_apelido"
+            app:layout_constraintVertical_bias="0.815" />
 
-    <EditText
-        android:id="@+id/edit_apelido"
-        style="@style/Edit_text"
-        android:layout_width="328dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="40dp"
-        android:hint="Apelido"
-        android:nextFocusForward="@id/edit_senha"
-        android:imeOptions="actionDone"
-        android:singleLine="true"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textselecione"
-        app:layout_constraintVertical_bias="0.058" />
+        <EditText
+            android:id="@+id/edit_senha"
+            style="@style/Edit_text"
+            android:layout_width="328dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="44dp"
+            android:hint="Senha"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:password="true"
+            android:nextFocusForward="@id/spinner_idade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.518"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_apelido" />
 
+        <TextView
+            android:id="@+id/textidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Idade"
+            android:textColor="@color/azul_escuro"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_idade"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/spinner_idade"
+            app:layout_constraintTop_toBottomOf="@+id/edit_senha"
+            app:layout_constraintVertical_bias="1.0" />
 
-    <TextView
-        android:id="@+id/textsenha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Senha"
-        android:textColor="@color/azul_escuro"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/edit_senha"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/edit_senha"
-        app:layout_constraintTop_toBottomOf="@+id/edit_apelido"
-        app:layout_constraintVertical_bias="0.815" />
+        <Spinner
+            android:id="@+id/spinner_idade"
+            android:layout_width="328dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/spinner_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.506"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_senha" />
 
-    <EditText
-        android:id="@+id/edit_senha"
-        style="@style/Edit_text"
-        android:layout_width="328dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="44dp"
-        android:hint="Senha"
-        android:imeOptions="actionDone"
-        android:singleLine="true"
-        android:password="true"
-        android:nextFocusForward="@id/spinner_idade"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_apelido" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button"
+            style="@style/Button"
+            android:layout_width="147dp"
+            android:layout_height="55dp"
+            android:text="Avançar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_idade"
+            app:layout_constraintVertical_bias="0.166" />
 
-    <TextView
-        android:id="@+id/textidade"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Idade"
-        android:textColor="@color/azul_escuro"
-        android:textSize="19sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/spinner_idade"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/spinner_idade"
-        app:layout_constraintTop_toBottomOf="@+id/edit_senha"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Spinner
-        android:id="@+id/spinner_idade"
-        android:layout_width="328dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/spinner_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_senha" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
-        style="@style/Button"
-        android:layout_width="147dp"
-        android:layout_height="55dp"
-        android:text="Avançar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_idade"
-        app:layout_constraintVertical_bias="0.166" />
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lembrar-me"
+            android:textColor="@color/azul_escuro"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_idade"
+            app:layout_constraintVertical_bias="0.5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>

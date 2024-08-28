@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,8 +23,6 @@ public class Tela_AnimalMatch extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_animal_match);
-
-
 
         Button btnterminar = findViewById(R.id.button_terminar);
         CardView cardArara = findViewById(R.id.arara);
@@ -90,7 +87,6 @@ public class Tela_AnimalMatch extends AppCompatActivity {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 return gestureDetector6.onTouchEvent(event);
-
             }
         });
 
@@ -99,10 +95,8 @@ public class Tela_AnimalMatch extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Tela_AnimalMatch.this, Tela_Principal.class);
                        startActivity(intent);
-
                 Toast.makeText(Tela_AnimalMatch.this, "Parabéns,você concluiu o desafio!", Toast.LENGTH_SHORT).show();
             }// fim onclick
         });
-
     }// fim onCreate
 }// fim Classe

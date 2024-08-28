@@ -17,8 +17,6 @@ public class SwiperListener extends GestureDetector.SimpleOnGestureListener {
         int velocity_threshold = 100;
         View view;
 
-
-
             public SwiperListener(View view){
 
                 this.view = view;
@@ -64,5 +62,3 @@ public class SwiperListener extends GestureDetector.SimpleOnGestureListener {
         }// fim metodo
 
             }//fim if
-
-

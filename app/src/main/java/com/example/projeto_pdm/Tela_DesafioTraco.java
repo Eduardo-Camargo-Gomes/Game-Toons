@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Tela_DesafioTraco extends AppCompatActivity {
@@ -47,12 +46,10 @@ public class Tela_DesafioTraco extends AppCompatActivity {
                 // Esta @VISIBLE, porque no traço o desnho não pode sumir
                 translucentImage.setVisibility(View.VISIBLE);
                 showToast("Parabéns, agora mostre ao seu responsável!!");
-                Intent intent = new Intent(Tela_DesafioTraco.this, Tela_Principal.class);
-                startActivity(intent);
+                //Intent intent = new Intent(Tela_DesafioTraco.this, Tela_Principal.class);
+                //startActivity(intent);
                 hasFinished = false;
             }
-
-
         });
     }
 

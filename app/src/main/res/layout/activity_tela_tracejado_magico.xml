@@ -8,8 +8,6 @@
     android:background="@color/vermelho"
     tools:context=".Tela_TracejadoMagico">
 
-
-
     <View
         android:id="@+id/container"
         style="@style/View_jogo1"
@@ -21,7 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/container"
         tools:ignore="ExtraText" />
-
 
     <ImageView
         android:id="@+id/Logo2"
@@ -168,7 +165,6 @@
         android:backgroundTint="@color/black"
         app:layout_constraintStart_toStartOf="@+id/magico"
         app:layout_constraintTop_toBottomOf="@+id/colorButton1" />
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"

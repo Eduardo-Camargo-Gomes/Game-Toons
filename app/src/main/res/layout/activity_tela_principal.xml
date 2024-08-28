@@ -25,7 +25,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 
-
     <TextView
         android:id="@+id/texgametooons"
         android:layout_width="wrap_content"
@@ -79,7 +78,6 @@
         android:layout_marginTop="20dp"
         app:layout_constraintVertical_bias="0.081" />
 
-
     <TextView
         android:id="@+id/textselecione"
         android:layout_width="wrap_content"
@@ -101,7 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="95dp"
         android:layout_marginTop="72dp"
-       android:backgroundTint="@color/vermelho"
+        android:backgroundTint="@color/vermelho"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
@@ -135,7 +133,6 @@
         app:layout_constraintTop_toTopOf="@+id/magico"
         app:layout_constraintVertical_bias="0.117" />
 
-
     <TextView
         android:id="@+id/texttracejado2"
         android:layout_width="201dp"
@@ -164,7 +161,6 @@
         app:layout_constraintTop_toBottomOf="@id/magico"
         app:layout_constraintVertical_bias="0.0" />
 
-
     <ImageView
         android:id="@+id/lapis"
         android:layout_width="64dp"
@@ -177,14 +173,12 @@
         app:layout_constraintTop_toTopOf="@+id/traco"
         app:layout_constraintVertical_bias="0.675" />
 
-
     <TextView
         android:id="@+id/texttraco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Desafio do traço"
         android:textColor="@color/white"
-
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/traco"
         app:layout_constraintEnd_toEndOf="@+id/traco"
@@ -221,7 +215,6 @@
         app:layout_constraintTop_toBottomOf="@id/traco"
         app:layout_constraintVertical_bias="0.0" />
 
-
     <ImageView
         android:id="@+id/peça"
         android:layout_width="64dp"
@@ -247,7 +240,6 @@
         app:layout_constraintTop_toTopOf="@+id/match"
         app:layout_constraintVertical_bias="0.117" />
 
-
     <TextView
         android:id="@+id/textmatch2"
         android:layout_width="201dp"
@@ -262,7 +254,5 @@
         app:layout_constraintTop_toTopOf="@+id/match"
         app:layout_constraintVertical_bias="0.823" />
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>

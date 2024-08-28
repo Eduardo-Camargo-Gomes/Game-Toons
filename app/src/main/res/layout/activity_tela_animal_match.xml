@@ -8,13 +8,11 @@
     android:background="@color/amarelo"
     tools:context=".Tela_TracejadoMagico">
 
-
     <View
         android:id="@+id/container"
         style="@style/View_jogo3"
         android:layout_width="449dp"
         android:layout_height="83dp"
-
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
@@ -35,7 +33,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3" />
 
-
     <TextView
         android:id="@+id/texgametooons"
         android:layout_width="wrap_content"
@@ -52,7 +49,6 @@
         app:layout_constraintVertical_bias="0.458"
         tools:ignore="MissingConstraints" />
 
-
     <View
         android:id="@+id/magico"
         style="@style/ContainerComponents"
@@ -64,7 +60,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/container"
         app:layout_constraintVertical_bias="0.139" />
-
 
     <TextView
         android:id="@+id/texTracejadomagico"
@@ -81,7 +76,6 @@
         app:layout_constraintVertical_bias="0.051"
         tools:ignore="MissingConstraints" />
 
-
     <View
         android:id="@+id/quadrado"
         style="@style/ContainerComponents"
@@ -93,7 +87,6 @@
         app:layout_constraintStart_toStartOf="@+id/magico"
         app:layout_constraintTop_toTopOf="@+id/magico"
         app:layout_constraintVertical_bias="0.212" />
-
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -111,10 +104,8 @@
             android:layout_height="match_parent"
             android:text="Arara"
             android:padding="10dp"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
-
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -132,12 +123,9 @@
             android:layout_height="match_parent"
             android:text="Vaca"
             android:padding="10dp"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
 
     </androidx.cardview.widget.CardView>
-
-
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -155,8 +143,7 @@
             android:layout_height="match_parent"
             android:text="Elefante"
             android:padding="10dp"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp"/>
 
     </androidx.cardview.widget.CardView>
 
@@ -176,10 +163,8 @@
             android:layout_height="match_parent"
             android:text="Pássaro"
             android:padding="10dp"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
-
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -197,11 +182,9 @@
             android:layout_height="match_parent"
             android:text="Guaxinim"
             android:padding="10dp"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
 
     </androidx.cardview.widget.CardView>
-
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -219,8 +202,7 @@
             android:layout_height="match_parent"
             android:text="Gaivota"
             android:padding="10dp"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -238,9 +220,6 @@
         app:layout_constraintTop_toTopOf="@+id/magico"
         app:layout_constraintVertical_bias="0.609"
         tools:ignore="MissingConstraints" />
-
-
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button_terminar"
