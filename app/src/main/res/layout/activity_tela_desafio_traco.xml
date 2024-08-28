@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/azul"
-    tools:context=".Tela_TracejadoMagico">
+    tools:context=".Tela_DesafioTraco">
 
 
     <View
@@ -14,7 +14,6 @@
         style="@style/View_jogo2"
         android:layout_width="449dp"
         android:layout_height="83dp"
-
         android:layout_marginTop="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.6"
@@ -85,14 +84,36 @@
     <View
         android:id="@+id/quadrado"
         style="@style/ContainerComponents"
-        android:layout_width="345dp"
-        android:layout_height="260dp"
+        android:layout_width="337dp"
+        android:layout_height="351dp"
         android:background="@color/cinza"
         app:layout_constraintBottom_toBottomOf="@+id/magico"
         app:layout_constraintEnd_toEndOf="@+id/magico"
         app:layout_constraintStart_toStartOf="@+id/magico"
         app:layout_constraintTop_toTopOf="@+id/magico"
         app:layout_constraintVertical_bias="0.249" />
+
+    <ImageView
+        android:id="@+id/translucentImage"
+        android:layout_width="320dp"
+        android:layout_height="352dp"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/caminhonoel"
+        app:layout_constraintBottom_toBottomOf="@+id/quadrado"
+        app:layout_constraintEnd_toEndOf="@+id/quadrado"
+        app:layout_constraintStart_toStartOf="@+id/quadrado"
+        app:layout_constraintTop_toTopOf="@+id/quadrado" />
+
+    <com.example.projeto_pdm.DrawingView
+        android:id="@+id/drawingView"
+        android:layout_width="337dp"
+        android:layout_height="350dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/quadrado"
+        app:layout_constraintEnd_toEndOf="@+id/quadrado"
+        app:layout_constraintStart_toStartOf="@+id/quadrado"
+        app:layout_constraintTop_toTopOf="@+id/quadrado" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/button"
